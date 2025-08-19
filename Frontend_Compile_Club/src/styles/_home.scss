@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
+.home-container {
+  padding-top: 30vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 15vh;
+
+  .home-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 1em;
+
+    .title-text {
+      font-family: "Indie Flower", cursive;
+      font-weight: 400;
+      font-size: 5em;
+        cursor: default;
+    }
+
+    .club-text {
+      font-family: "Indie Flower", cursive;
+      font-weight: 400;
+      font-size: 5em;
+      margin-left: 2.1em;
+      transform: translateY(-22px);
+    }
+  }
+}
+
+.home-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #89CFF0;
+    margin-bottom: 4em;
+    max-width: 1000px;
+    align-self: center;
+    justify-self: center;
+
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    grid-gap: 1em;
+
+    .my-dropdown-btn {
+        background-color: #6D1FF1;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+
+      .dropdown-toggle {
+        color: #F6FDFE;
+        font-weight: bold;
+        background-color: #6D1FF1;
+        font-size: clamp(1em, 3vw, 1.7em);
+      }
+
+      .dropdown-menu.show {
+        background-color: transparent;
+        border: none;
+      }
+
+      .dropdown-item {
+        background: linear-gradient(to right, #7BA5D0 51%, #86E840 100%);
+        
+        &:hover {
+        background: #86E840 !important;
+        color: white !important;        }
+      }
+
+    }
+
+    .input-container {
+
+        .input-label {
+            color: #F6FDFE;
+            transform: translateY(0.8em);
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+
+        .my-input {
+            transition: border-color 0.2s ease;
+            border: none;
+            border-radius: 0.4em;
+            font-size: clamp(1em, 3vw, 1.4em);
+            padding: 0.2em;     
+            width: 100%;
+        }
+
+    }
+
+    .x-logo {
+        align-self: center;
+        justify-self: center;
+    }
+
+    .x-logo-special {
+        transform: translateY(1.4em);
+    }
+
+    .submit-btn {
+        margin-top: 5vh;
+        margin-left: 0em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color : white;
+        align-self: center;
+        justify-self: center;
+        padding-left: 2em;
+        padding-right: 2em;
+        border-radius: 1em;
+        border: solid 2px rgba(192, 192, 192, 0.8);
+        font-size: 1.2em;
+        font-weight: 800;
+
+        .arrow-symbol {
+            transform: translateX(0.4em);
+        }
+
+
+
+    } 
+    
+    
+    .submit-btn-skip {
+        border: solid 2px rgb(255, 255, 255);
+        font-weight: 500;
+        color : rgb(240, 240, 240, 0.7);
+
+        &:hover {
+            color : rgb(240, 240, 240, 1);
+        }
+    }
+
+    .submit-btn-can-confirm {
+        border: solid 2px rgba(192, 192, 192, 1);
+        background-color: #3dc51e;
+    }
+
+    .submit-btn-cant-confirm {
+        border: solid 2px rgba(192, 192, 192, 1);
+        background-color: #DA2326;
+    }
+
+
+
+
+  }
+}
+
+@media (min-width: 701px) {
+  .home-container {
+    .home-header {
+      .title-text {
+        font-size: 8em;
+      }
+
+      .club-text {
+        font-size: 8em;
+        transform: translateY(-30px);
+      }
+    }
+  }
+}

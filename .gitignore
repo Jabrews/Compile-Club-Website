@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env/
+
+# Environment variables
+.env
+
+# Django/Migrations
+*.sqlite3
+db.sqlite3
+*/migrations/
+*.log
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Node (if using React or Vite)
+dist/
+build/

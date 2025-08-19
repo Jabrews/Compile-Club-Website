@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
+.join-header {
+    font-family: "Indie Flower", cursive;
+    font-size: 3em;
+    letter-spacing: 0.2em;
+    align-self: center;
+    justify-self: center;
+    margin-top: 10vh;
+    margin-bottom: 2em;
+    cursor: default;
+}
+.form-stat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    letter-spacing: 0.1em;
+    font-size: 1.4em;
+    align-self: center;
+    justify-self: center;
+    margin-top: 5em;
+    background-color :#C1F0DC;
+    padding: 1em;
+    border-radius: 1em;
+
+    .stat-text {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-items: center;
+        margin-bottom: 0.4em;
+    }
+
+    .back-btn {
+        align-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1em;
+        background-color: rgb(192, 184, 184, 0.5); 
+        padding: 0.2em;
+        border-radius: 0.8em;
+        color:rgb(255, 255, 255);
+        font-weight: 600;
+        border: solid 1px white;
+        width: fit-content;
+    }
+
+
+}
+
+
+
+
+.join-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4em;
+    background-color: #dab6da;
+    padding: 0.4em;
+    border-radius: 1em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    color:rgb(255, 255, 255);
+    font-weight: 700;
+    border: solid 1px white;
+
+    .btn-icon {
+        margin-left: 0.2em;
+    }
+
+
+}
+
+.discord-container {
+    align-self: center;
+    justify-self: center;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #C1F0DC;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+    .server-header {
+        font-weight: 600;
+        font-size: 2em;
+        letter-spacing: 0.1em;
+        margin: 0.2em;
+        display: flex;
+    
+        img {
+            align-self: center;
+            max-width: 1em;
+            max-height: 1em ;
+        }
+
+    }
+
+    .discord-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .discord-card-words {
+            margin-left: 1.4em;
+            margin-top: 2em;
+
+            .server-name {
+                font-weight: 600;
+                font-family: "Indie Flower", cursive;
+                letter-spacing: 0.1em;
+                font-size: 1.6em;
+                text-decoration: underline;
+            }
+
+            .server-bio {
+                font-size: 1.2em;
+            }
+
+        }
+
+
+
+        .server-logo {
+            align-self: center;
+            justify-self: center;
+            width: 15em;
+            height: 15em;
+        }
+
+
+
+    }
+
+
+}
+
+.gif {
+    margin-top: 9.2em;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 8em;
+}
+
+@media (max-width: 499px) {
+
+    .join-header {
+        margin-left: 4em
+    }
+
+    .discord-container {
+        margin: 0;
+        margin-top: 15vh;
+    }
+
+    .form-stat-container {
+        font-size: 1.2em;
+        margin-right: 1em;
+    }
+
+
+}
