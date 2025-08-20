@@ -28,8 +28,8 @@ export default function ErrorModal({ isShown, toggleIsShown, errorMessage }: Ser
         transition={{ type: 'spring', stiffness: 80, damping: 15 }}
       >
 
-        <p className="problem-txt">Problem : already submitted a form</p>
-        <p> {errorMessage} </p>
+        <p className="problem-txt">Problem With Submit</p>
+        <p style={{fontSize: '0.4em'}}> {errorMessage} </p>
         <motion.button
           onClick={handleBtnClose}
           className="close-btn"

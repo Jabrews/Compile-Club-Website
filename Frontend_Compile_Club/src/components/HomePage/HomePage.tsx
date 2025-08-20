@@ -23,6 +23,7 @@ export default function HomePage() {
       else if (errorFound) {
         setModalErrorMessage(errorMessage)
       }
+      toggleIsShown(true)
     }
 
   }, [isDuplicate, errorFound, errorMessage]);
