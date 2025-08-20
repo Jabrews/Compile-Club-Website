@@ -1,11 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
 
-type UserInfoForm = {
-  hearFormChoice: string;
-  name: string;
-  created_at: string;
-  ip_address: string | null;
-};
 
 export function useGetUserFormsCount() {
   return useQuery({
@@ -16,7 +10,7 @@ export function useGetUserFormsCount() {
         headers: { 'Accept': 'application/json' }
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return res.json() as Promise<{count:number; data: UserInfoForm[]}>;
+      return res.json() as Promise<{count:number}>;
     },
     staleTime: 30_000,
   });
