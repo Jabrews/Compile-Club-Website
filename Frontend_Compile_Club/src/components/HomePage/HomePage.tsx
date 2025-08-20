@@ -10,7 +10,7 @@ import { Forward } from 'lucide-react';
 import useHandleRequest from './hooks/useHandleRequest';
 
 export default function HomePage() {
-  const {handleRequest} = useHandleRequest();
+  const {handleRequest, isLoading} = useHandleRequest();
   const navigate = useNavigate(); // ← for routing
 
   const [hearFormChoice, setHearFormChoice] = useState('');
@@ -82,6 +82,7 @@ export default function HomePage() {
           </div>
 
           <motion.button
+            disabled={isLoading}
             type="submit"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
