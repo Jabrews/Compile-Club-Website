@@ -3,6 +3,7 @@ import {motion} from 'framer-motion'
 import { Ampersand } from 'lucide-react';
 import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import {useGetUserFormsCount} from './hooks/useGetUserFormsCount'
 
 
 import discord_logo from '../../assets/discord-server-pic.png'
@@ -13,6 +14,9 @@ import gif from '../../assets/kitty.gif'
 import ServerModal from './ServerModal'
 
 export default function ServerPage() {
+
+    // hook init
+    const { data } = useGetUserFormsCount();
 
     const [isShown, toggleIsShown] = useState(false)
 
@@ -60,7 +64,7 @@ export default function ServerPage() {
                 <div className='form-stat-container'>
                     <div className='stat-text'>
                         <p> forms submitted : </p>
-                        <p> 0 </p>
+                        <p> {data?.count ? data.count : 'couldnt find form count'} </p>
                     </div>
                     <motion.button 
                     className='back-btn'
