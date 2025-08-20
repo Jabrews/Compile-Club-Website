@@ -1,0 +1,42 @@
+
+.server-modal-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin-top: 50vh;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #91b9c4;
+    padding: 2em;
+    border-radius: 1em;
+
+    a {
+        font-weight: 600;
+        text-decoration: underline;
+        color: white;
+        text-decoration-color: white;
+    }
+
+    .problem-txt {
+        font-size: 1.6em;
+        color: red;
+    }
+
+    .close-btn {
+        align-self: center;
+        justify-self: center;
+        background-color: rgb(224, 199, 165);
+        padding: 0.8em;
+        font-size: 1.2em;
+        font-weight: 700;
+        border-radius: 2em;
+        padding-left: 1em;
+        padding-right: 1em;
+        border: 1px, solid, white;
+        color: white;
+        margin-top: 1em;
+    }
+
+
+}
