@@ -10,7 +10,7 @@ import { Forward } from 'lucide-react';
 import useHandleRequest from './hooks/useHandleRequest';
 
 export default function HomePage() {
-  const handleRequest = useHandleRequest();
+  const {handleRequest} = useHandleRequest();
   const navigate = useNavigate(); // ← for routing
 
   const [hearFormChoice, setHearFormChoice] = useState('');

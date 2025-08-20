@@ -4,6 +4,8 @@ import logging
 # rest framework stuf
 from rest_framework.decorators import api_view, authentication_classes
 from rest_framework.permissions import AllowAny
+from django.views.decorators.csrf import csrf_protect, ensure_csrf_cookie
+
 # from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
@@ -20,6 +22,13 @@ from .util import get_client_ip
 logger = logging.getLogger(__name__)  # get a logger for this specific module
 # logger.info("Just some info.")
 
+@api_view(['GET'])
+@ensure_csrf_cookie
+def csrf(request):
+    return Response({'ok': True})
+
+
+
 
 # Create your views here.o
 
@@ -34,6 +43,8 @@ def get_user_info_forms(request):
     
 
 @api_view(['POST'])
+@authentication_classes([]) 
+@csrf_protect 
 def submit_user_info_form(request):
     ip_address = get_client_ip(request)
 
