@@ -56,16 +56,18 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'Backend_Compile_Club.urls'
 
+
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        "DIRS": [FRONTEND_BUILD_DIR] if FRONTEND_BUILD_DIR.exists() else [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [FRONTEND_BUILD_DIR],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",        # admin needs this
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",  # <-- add this
             ],
         },
     },
