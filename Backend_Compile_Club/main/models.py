@@ -4,10 +4,10 @@ from django.db import models
 class UserInfoFormModal (models.Model) :
 
     HEAR_FORM_CHOICES = [
-        ('flyer-coffee', 'Flyer at a coffee shop'),
-        ('flyer-library', 'Flyer at a Library'),
-        ('word_of_mouth', 'Word of mouth'),
-        ('friend', 'Through a friend'),
+        ('Flyer at a coffee shop', 'Flyer at a coffee shop'),
+        ('Flyer at a Library', 'Flyer at a Library'),
+        ('Word of mouth', 'Word of mouth'),
+        ('Through a friend', 'Through a friend'),
     ]
 
     hearFormChoice = models.CharField(max_length=30, choices=HEAR_FORM_CHOICES)
