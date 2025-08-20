@@ -29,7 +29,6 @@ def HomePage(request) :
 @api_view(['GET'])
 @authentication_classes([])          
 def get_user_info_forms(request):
-    logger.info('get_user_info_form running btw')
     qs = UserInfoFormModal.objects.all()
     return Response({'count': qs.count()})
     
