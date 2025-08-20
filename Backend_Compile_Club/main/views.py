@@ -2,7 +2,8 @@ from django.shortcuts import render
 import logging
 
 # rest framework stuf
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, authentication_classes
+from rest_framework.permissions import AllowAny
 # from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
@@ -26,13 +27,10 @@ def HomePage(request) :
     return render(request, 'index.html')
 
 @api_view(['GET'])
+@authentication_classes([])          
 def get_user_info_forms(request):
-    userInfoForms = UserInfoFormModal.objects.all()
-    count = userInfoForms.count() 
-    return Response({
-            'count': count,
-    })
-
+    qs = UserInfoFormModal.objects.all()
+    return Response({'count': qs.count()})
     
 
 @api_view(['POST'])
