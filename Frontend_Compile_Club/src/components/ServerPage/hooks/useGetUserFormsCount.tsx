@@ -17,7 +17,7 @@ export function useGetUserFormsCount() {
   return useQuery({
     queryKey: ['userInfoForms'],
     queryFn: async (): Promise<ApiResponse> => {
-      const res = await fetch('http://compile-club.org:8080/api/get_user_info_forms', {
+      const res = await fetch('/api/get_user_info_forms', {
         // include credentials only if you’re using session auth/cookies:
         // credentials: 'include',
         headers: {

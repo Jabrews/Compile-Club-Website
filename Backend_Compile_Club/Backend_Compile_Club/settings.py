@@ -13,7 +13,9 @@ SECRET_KEY = env('SECRETKEY')
 DEBUG = env.bool('DEBUG')
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 CORS_ALLOWED_ORIGINS = env.list('CORS_ALLOWED_ORIGINS')
+CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS")
 WSGI_APPLICATION = 'Backend_Compile_Club.wsgi.application'
+
 
 # Application definition
 
