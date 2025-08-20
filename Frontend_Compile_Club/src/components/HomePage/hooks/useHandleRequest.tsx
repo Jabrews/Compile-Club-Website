@@ -8,11 +8,10 @@ const getCookie = (name: string) =>
 export default function useHandleRequest() {
   const navigate = useNavigate();
 
-  const API_BASE = 'https://api.compile-club.org'; 
 
   const submitForm = useMutation({
     mutationFn: async (payload: { hearFormChoice: string; name: string }) => {
-      const res = await fetch(`${API_BASE}/api/submit_user_info_form/`, {
+      const res = await fetch(`https://compile-club.org/api/submit_user_info_form/`, {
         method: 'POST',
         credentials: 'include', // needed if using CSRF/session cookies
         headers: {
