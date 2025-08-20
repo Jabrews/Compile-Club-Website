@@ -29,7 +29,7 @@ export default function ErrorModal({ isShown, toggleIsShown, errorMessage }: Ser
       >
 
         <p className="problem-txt">Problem With Submit</p>
-        <p style={{fontSize: '0.4em'}}> {errorMessage} </p>
+        <p style={{fontSize: '1em'}}> {errorMessage} </p>
         <motion.button
           onClick={handleBtnClose}
           className="close-btn"
