@@ -64,7 +64,7 @@ export default function ServerPage() {
                 <div className='form-stat-container'>
                     <div className='stat-text'>
                         <p> forms submitted : </p>
-                        <p> {data?.count ? data.count : 'couldnt find form count'} </p>
+                        <p> {data?.count ? data.count : '0'} </p>
                     </div>
                     <motion.button 
                     className='back-btn'
