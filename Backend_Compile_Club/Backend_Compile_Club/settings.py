@@ -9,7 +9,7 @@ FRONTEND_BUILD_DIR = BASE_DIR.parent / 'Frontend_Compile_Club'/ 'dist'
 env = environ.Env()
 environ.Env.read_env(BASE_DIR / '.env')
 
-SECRET_KEY = env('SECRETKEY')
+SECRET_KEY = env('SECRET_KEY')
 DEBUG = env.bool('DEBUG')
 ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 CORS_ALLOWED_ORIGINS = env.list('CORS_ALLOWED_ORIGINS')
