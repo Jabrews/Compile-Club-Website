@@ -7,25 +7,16 @@ type UserInfoForm = {
   ip_address: string | null;
 };
 
-// if your API returns { count, data }
-type ApiResponse = {
-  count: number;
-  data: UserInfoForm[];
-};
-
 export function useGetUserFormsCount() {
   return useQuery({
     queryKey: ['userInfoForms'],
-    queryFn: async (): Promise<ApiResponse> => {
-      const res = await fetch('/api/get_user_info_forms', {
-        // include credentials only if you’re using session auth/cookies:
-        // credentials: 'include',
-        headers: {
-          'Accept': 'application/json'
-        }
+    queryFn: async () => {
+      const res = await fetch('/api/get_user_info_forms/', {  // ← note trailing slash
+        // ensure NO auth header is added by your wrapper
+        headers: { 'Accept': 'application/json' }
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return res.json();
+      return res.json() as Promise<{count:number; data: UserInfoForm[]}>;
     },
     staleTime: 30_000,
   });
